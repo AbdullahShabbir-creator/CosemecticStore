@@ -13,11 +13,11 @@ export default function Navbar() {
             </div>
 
             <nav className="navbar navbar-expand-lg navbar-dark bg-black">
-            <div className="w-100 d-flex justify-content-around align-items-center px-3">
+                <div className="w-100 d-flex justify-content-around align-items-center px-3">
 
 
                     <div className="search-box">
-                     <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                         <input type="text" className="search-input" placeholder="Search..." />
                     </div>
 
@@ -30,9 +30,10 @@ export default function Navbar() {
                         <Link to="#">
                             <i class="fa-solid fa-location-dot"></i>
                         </Link>
-                        <Link to="#">
-                            <i class="fa-solid fa-circle-user"></i>
+                        <Link to="/signup">
+                            <i className="fa-solid fa-circle-user"></i>
                         </Link>
+
                         <Link to="#">
                             <i class="fa-solid fa-cart-plus"></i>
                         </Link>

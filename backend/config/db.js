@@ -1,15 +1,8 @@
-const mongoose = require('mongoose');
+// import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-const connectDB = async () => {
-  try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/glow and glamour", {
-      
-    });
-    console.log("MongoDB connected successfully");
-  } catch (err) {
-    console.error("MongoDB connection failed:", err);
-    process.exit(1); // Exit process with failure code
-  }
-};
+dotenv.config(); // Ensure .env file is loaded
 
-module.exports = connectDB; // Ensure you are exporting it correctly
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected successfully'))
+  .catch((err) => console.error('MongoDB connection failed:', err));
