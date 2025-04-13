@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './Frontend/Navbar/Navbar';
 import Hero from './Frontend/hero/Hero';
+import LandingSections from './Frontend/LandingSections/LandingSections';
 import Login from './Frontend/Auth/Login';
 import Signup from './Frontend/Auth/Signup';
 import { CartProvider } from './Frontend/Context/CartContext';
@@ -72,6 +73,7 @@ function App() {
             <Route path="/" element={
               <div>
                 <Hero />
+                <LandingSections />
               </div>
             } />
             
