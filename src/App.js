@@ -14,6 +14,9 @@ import Profile from './Frontend/User/Profile';
 import SetupAdmin from './Frontend/Admin/SetupAdmin';
 import OrderHistory from './Frontend/User/OrderHistory';
 import PrivateRoute from './Frontend/Components/PrivateRoute';
+import Footer from './Frontend/Footer/Footer';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Makeup Products
 import FacePowders from './Frontend/Products/FacePowders';
@@ -142,6 +145,18 @@ function App() {
             <Route path="/haircare/serums" element={<HairSerums />} />
             <Route path="/haircare/tools" element={<HairTools />} />
           </Routes>
+          <Footer />
+          <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </Router>
       </CartProvider>
     </AuthProvider>
