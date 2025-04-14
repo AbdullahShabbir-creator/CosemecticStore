@@ -56,7 +56,7 @@ const SpringCollection = () => {
                                 <span className="original-price">${product.originalPrice.toFixed(2)}</span>
                             </p>
                             <p className="product-description">{product.description}</p>
-                            <Link to={`/product/${product.id}`} className="add-to-cart-btn">
+                            <Link  className="add-to-cart-btn">
                                 Add to Cart
                             </Link>
                         </div>

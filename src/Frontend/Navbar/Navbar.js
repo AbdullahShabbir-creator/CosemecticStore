@@ -66,7 +66,7 @@ export default function Navbar() {
                 </p>
             </div>
 
-            <nav className="navbar navbar-expand-lg navbar-dark bg-black">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-black " style={{height:"138px"}}>
                 <div className="w-100 d-flex justify-content-around align-items-center px-3">
                     <div className="search-box">
                         <i className="fa-solid fa-magnifying-glass"></i>
@@ -89,7 +89,7 @@ export default function Navbar() {
                             
                             {/* User dropdown menu */}
                             {showUserMenu && isAuthenticated && (
-                                <div className="user-dropdown-menu">
+                                <div className="user-dropdown-menu p-0">
                                     <div className="user-info">
                                         <span className="user-name">{user?.name || 'User'}</span>
                                         <span className="user-email">{user?.email}</span>
@@ -97,12 +97,12 @@ export default function Navbar() {
                                     <div className="dropdown-divider"></div>
                                     
                                     {user?.role === 'admin' && (
-                                        <div className="dropdown-item" onClick={handleAdminDashboard}>
+                                        <div className="dropdown-item p-0" onClick={handleAdminDashboard}>
                                             <i className="fa-solid fa-gauge-high"></i> Dashboard
                                         </div>
                                     )}
                                     
-                                    <div className="dropdown-item" onClick={handleProfile}>
+                                    <div className="dropdown-item p-0" onClick={handleProfile}>
                                         <i className="fa-solid fa-user"></i> Profile
                                     </div>
                                     

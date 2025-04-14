@@ -8,21 +8,21 @@ const SpecialOffers = () => {
             id: 1,
             title: "Spring Collection",
             description: "New arrivals up to 30% off",
-            image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+            image: "https://th.bing.com/th/id/OIP.G4BSD-Ub24oRAvurcz2ZYQHaHa?rs=1&pid=ImgDetMain",
             discount: "30%"
         },
         {
             id: 2,
             title: "Bundle Deals",
             description: "Save more when you buy in sets",
-            image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+            image: "https://th.bing.com/th/id/OIP.-xR5MR0D1q45BRoiux8ryQHaJ3?w=736&h=981&rs=1&pid=ImgDetMain",
             discount: "20%"
         },
         {
             id: 3,
             title: "Student Discount",
             description: "Special offer for students",
-            image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+            image: "https://th.bing.com/th/id/R.5a9b00e98eae868915abe932db8d12ad?rik=DAuP4kSKiT625w&pid=ImgRaw&r=0",
             discount: "15%"
         }
     ];

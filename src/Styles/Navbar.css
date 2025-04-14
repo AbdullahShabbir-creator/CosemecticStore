@@ -1,6 +1,6 @@
 .announcement {
-    background: black;
-    color: white;
+  background: #fff;
+    color: #212529;
     text-align: center;
     padding: 10px 0;
     overflow: hidden;
@@ -12,6 +12,9 @@
     display: inline-block;
     padding-left: 100%;
     animation: marquee 23s linear infinite;
+    margin-bottom: -12px;
+    margin-top: 6px;
+    font-size: 22px;
   }
   
   @keyframes marquee {
@@ -226,9 +229,11 @@ font-family: 'kikobold' !important;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
+  from { opacity: 0; transform: translateY(-16px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
 
 .user-info {
   background-color: #f8f8f8;
@@ -279,6 +284,7 @@ font-family: 'kikobold' !important;
   width: 20px;
   text-align: center;
   color: #666;
+  padding: 15px;
 }
 
 .dropdown-item.logout {

@@ -7,19 +7,19 @@ const BeautyTips = () => {
             id: 1,
             title: "Perfect Foundation Application",
             description: "Learn how to apply foundation for a flawless finish",
-            image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2"
+            image: "https://th.bing.com/th/id/OIP.QGc6-71b1X0KwrxjWnOQVgHaEP?rs=1&pid=ImgDetMain"
         },
         {
             id: 2,
             title: "Hair Care Routine",
             description: "Step-by-step guide to healthy hair",
-            image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2"
+            image: "https://th.bing.com/th/id/R.3f889e6f6b2ae62583c5a5a50e3c7e68?rik=kg2eUVg%2fbyI%2f%2fg&pid=ImgRaw&r=0"
         },
         {
             id: 3,
             title: "Skin Care Basics",
             description: "Essential skincare tips for glowing skin",
-            image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2"
+            image: "https://th.bing.com/th/id/OIP.0GKOeu4RKtMMsUuucwZvQQHaFX?rs=1&pid=ImgDetMain"
         }
     ];
 

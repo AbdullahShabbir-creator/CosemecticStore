@@ -469,7 +469,7 @@ body {
   border: 3px solid rgba(231, 76, 60, 0.1);
   border-radius: 50%;
   border-top-color: var(--primary-color);
-  animation: spin 1s linear infinite;
+  animation: spin 3s linear infinite;
   margin-bottom: 1.5rem;
 }
 

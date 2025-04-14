@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Context/AuthContext';
 import './Profile.css';
 
@@ -102,28 +103,32 @@ const Profile = () => {
           >
             <i className="fas fa-user"></i> My Profile
           </li>
-          <li 
-            className={activeTab === 'orders' ? 'active' : ''} 
-            onClick={() => setActiveTab('orders')}
-          >
-            <i className="fas fa-shopping-bag" to="/orders"></i> My Orders
+
+          <li>
+            <Link to="/orders">
+              <i className="fas fa-shopping-bag"></i> My Orders
+            </Link>
           </li>
+
           <li 
             className={activeTab === 'addresses' ? 'active' : ''} 
             onClick={() => setActiveTab('addresses')}
           >
             <i className="fas fa-map-marker-alt"></i> My Addresses
           </li>
+
           <li 
             className={activeTab === 'wishlist' ? 'active' : ''} 
             onClick={() => setActiveTab('wishlist')}
           >
             <i className="fas fa-heart"></i> My Wishlist
           </li>
+
           <li onClick={handleLogout}>
             <i className="fas fa-sign-out-alt"></i> Logout
           </li>
         </ul>
+
       </div>
       
       <div className="profile-content">

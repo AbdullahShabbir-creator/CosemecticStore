@@ -70,6 +70,13 @@ import SpringCollection from './Frontend/Products/Offers/SpringCollection';
 import BundleOffer from './Frontend/Products/Offers/BundleOffer';
 import StudentDiscount from './Frontend/Products/Offers/StudentDiscount';
 
+// Quick Link Pages
+import AboutUs from './Frontend/Pages/AboutUs';
+import ContactUs from './Frontend/Pages/ContactUs';
+import PrivacyPolicy from './Frontend/Pages/PrivacyPolicy';
+import TermsConditions from './Frontend/Pages/TermsConditions';
+import ShippingPolicy from './Frontend/Pages/ShippingPolicy';
+
 function App() {
   return (
     <AuthProvider>
@@ -154,6 +161,13 @@ function App() {
             <Route path="/haircare/oils" element={<HairOils />} />
             <Route path="/haircare/serums" element={<HairSerums />} />
             <Route path="/haircare/tools" element={<HairTools />} />
+            
+            {/* Quick Link Routes */}
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsConditions />} />
+            <Route path="/shipping" element={<ShippingPolicy />} />
           </Routes>
           <Footer />
           <ToastContainer

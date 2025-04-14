@@ -28,11 +28,11 @@ const Footer = () => {
 
     // Product categories
     const categories = [
-        { id: 1, text: 'Makeup', path: '/makeup' },
-        { id: 2, text: 'Skincare', path: '/skincare' },
-        { id: 3, text: 'Hair Care', path: '/haircare' },
-        { id: 4, text: 'Beauty Tools', path: '/tools' },
-        { id: 5, text: 'Gift Sets', path: '/gifts' }
+        { id: 1, text: 'Makeup', path: '/makeup/face-powders' },
+        { id: 2, text: 'Skincare', path: '/skincare/cleansers' },
+        { id: 3, text: 'Hair Care', path: '/haircare/shampoos' },
+        { id: 4, text: 'Sun Care', path: '/suncare/sunscreens' },
+        { id: 5, text: 'Accessories  ', path: '/accessories/makeup-sponges' }
     ];
 
     // Handle social media link click
@@ -141,7 +141,7 @@ const Footer = () => {
                             <div className="payment-methods">
                                 <img 
                                     src="https://via.placeholder.com/100x30" 
-                                    alt="Payment Methods" 
+                                    alt="" 
                                     style={{ width: '100%', maxWidth: '300px', marginTop: '15px' }}
                                 />
                             </div>
@@ -150,7 +150,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="footer-bottom">
+            {/* <div className="footer-bottom">
                 <div className="container">
                     <div className="footer-bottom-content">
                         <div className="footer-copyright">
@@ -165,7 +165,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </footer>
     );
 };
