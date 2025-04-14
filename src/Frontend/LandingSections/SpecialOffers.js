@@ -46,7 +46,12 @@ const SpecialOffers = () => {
                         <div className="offer-content">
                             <h3>{offer.title}</h3>
                             <p>{offer.description}</p>
-                            <Link to="/offers" className="shop-now-btn">
+                            <Link 
+                                to={offer.title === "Spring Collection" ? "/offers/spring-collection" : 
+                                     offer.title === "Bundle Deals" ? "/offers/bundle-offers" : 
+                                     "/offers/student-discounts"}
+                                className="shop-now-btn"
+                            >
                                 Shop Now
                             </Link>
                         </div>

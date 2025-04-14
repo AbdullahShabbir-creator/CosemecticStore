@@ -65,6 +65,11 @@ import HairOils from './Frontend/Products/Hair/HairOils';
 import HairSerums from './Frontend/Products/Hair/HairSerums';
 import HairTools from './Frontend/Products/Hair/HairTools';
 
+// Offers
+import SpringCollection from './Frontend/Products/Offers/SpringCollection';
+import BundleOffer from './Frontend/Products/Offers/BundleOffer';
+import StudentDiscount from './Frontend/Products/Offers/StudentDiscount';
+
 function App() {
   return (
     <AuthProvider>
@@ -95,6 +100,11 @@ function App() {
             {/* Cart and Checkout Routes */}
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
+            
+            {/* Offer Routes */}
+            <Route path="/offers/spring-collection" element={<SpringCollection />} />
+            <Route path="/offers/bundle-offers" element={<BundleOffer />} />
+            <Route path="/offers/student-discounts" element={<StudentDiscount />} />
             
             {/* Makeup Routes */}
             <Route path="/makeup/face-powders" element={<FacePowders />} />

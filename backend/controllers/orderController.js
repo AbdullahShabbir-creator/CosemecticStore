@@ -58,10 +58,9 @@ const createOrder = async (req, res) => {
         const processedOrderItems = [];
         
         for (const item of orderItems) {
-            // Check if this is a real product with a MongoDB ID
+            // If product ID is provided and valid, check stock
             if (item.product && isValidObjectId(item.product)) {
                 try {
-                    // Find the product in the database
                     const product = await Product.findById(item.product);
                     
                     if (!product) {
@@ -70,23 +69,23 @@ const createOrder = async (req, res) => {
                         });
                     }
                     
-                    // Check stock
+                    // Check stock only for real products
                     if (product.countInStock < item.quantity) {
                         return res.status(400).json({ 
                             error: `Not enough stock for ${product.name}` 
                         });
                     }
                     
-                    // Add to processed items
                     processedOrderItems.push({
                         product: product._id,
                         name: product.name,
                         image: product.images[0] || item.image,
                         price: product.price,
-                        quantity: item.quantity
+                        quantity: item.quantity,
+                        isDemoProduct: false
                     });
                     
-                    // Update product stock
+                    // Update product stock only for real products
                     product.countInStock -= item.quantity;
                     await product.save();
                     
@@ -97,12 +96,13 @@ const createOrder = async (req, res) => {
                     });
                 }
             } else {
-                // This is a demo product without a MongoDB ID
+                // This is a demo product
                 processedOrderItems.push({
                     name: item.name,
                     image: item.image,
                     price: item.price,
-                    quantity: item.quantity
+                    quantity: item.quantity,
+                    isDemoProduct: true
                 });
             }
         }

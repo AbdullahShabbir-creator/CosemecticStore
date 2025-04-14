@@ -22,6 +22,10 @@ const orderItemSchema = new mongoose.Schema({
         type: Number,
         required: true,
         default: 1
+    },
+    isDemoProduct: {
+        type: Boolean,
+        default: false
     }
 });
 

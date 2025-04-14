@@ -64,47 +64,15 @@ const Checkout = () => {
                 setLoading(true);
                 setError(null);
                 
-                // Fetch real product data from the database to get valid MongoDB IDs
-                const productPromises = cartItems.map(async (item) => {
-                    try {
-                        // For demo products, use the seeded products we just created
-                        const response = await axios.get('http://localhost:5000/api/products', {
-                            headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
-                        });
-                        
-                        // Find a matching product by name (case insensitive)
-                        const matchingProduct = response.data.products.find(
-                            p => p.name.toLowerCase() === item.name.toLowerCase()
-                        );
-                        
-                        if (matchingProduct) {
-                            return {
-                                product: matchingProduct._id,
-                                name: matchingProduct.name,
-                                image: matchingProduct.images[0] || item.image,
-                                price: parseFloat(matchingProduct.price),
-                                quantity: parseInt(item.quantity || 1)
-                            };
-                        } else {
-                            // Use first product as fallback if no match found
-                            const fallbackProduct = response.data.products[0];
-                            return {
-                                product: fallbackProduct._id,
-                                name: item.name,
-                                image: item.image,
-                                price: parseFloat(item.price),
-                                quantity: parseInt(item.quantity || 1)
-                            };
-                        }
-                    } catch (err) {
-                        console.error('Error fetching product data:', err);
-                        throw new Error('Failed to fetch product data');
-                    }
-                });
-                
-                // Wait for all product data to be fetched
-                const orderItems = await Promise.all(productPromises);
-                
+                // Prepare order items directly from cart
+                const orderItems = cartItems.map(item => ({
+                    product: item._id || null, // Use product ID if available
+                    name: item.name,
+                    image: item.image,
+                    price: parseFloat(item.price),
+                    quantity: parseInt(item.quantity || 1)
+                }));
+
                 // Prepare shipping address
                 const shippingAddress = {
                     fullName: `${formData.firstName} ${formData.lastName}`,
@@ -150,12 +118,18 @@ const Checkout = () => {
                 setLoading(false);
             } catch (err) {
                 console.error('Error creating order:', err);
+                let errorMessage = 'Failed to place order. Please try again.';
+                
+                // Provide more specific error messages
                 if (err.response?.data?.error) {
-                    console.error('Server error message:', err.response.data.error);
-                    setError(err.response.data.error);
-                } else {
-                    setError('Failed to place order. Please try again.');
+                    errorMessage = err.response.data.error;
+                } else if (err.message.includes('Network Error')) {
+                    errorMessage = 'Unable to connect to server. Please check your internet connection.';
+                } else if (err.message.includes('timeout')) {
+                    errorMessage = 'Server response timed out. Please try again.';
                 }
+                
+                setError(errorMessage);
                 setLoading(false);
             }
         }
