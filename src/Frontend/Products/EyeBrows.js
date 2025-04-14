@@ -11,7 +11,7 @@ const EyeBrows = () => {
       id: 1,
       name: "Brow Pencil",
       price: "$19.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://m.media-amazon.com/images/I/41xUBB7qWEL._SL500_.jpg",
       description: "Precision brow pencil for defined brows",
       rating: 4.8,
       reviews: 215
@@ -20,7 +20,7 @@ const EyeBrows = () => {
       id: 2,
       name: "Brow Pomade",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://static.beautytocare.com/cdn-cgi/image/width=1440,height=1200,f=auto/media/catalog/product//m/a/makeup-revolution-brow-pomade-medium-brown-2-5g_1.jpg",
       description: "Long-lasting pomade for sculpted brows",
       rating: 4.9,
       reviews: 245
@@ -29,7 +29,7 @@ const EyeBrows = () => {
       id: 3,
       name: "Brow Gel",
       price: "$14.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://img.drz.lazcdn.com/collect/my/p/6b60154402fd6615845e5547878a2a4e.jpg_960x960q80.jpg_.webp",
       description: "Clear gel for setting and taming brows",
       rating: 4.7,
       reviews: 198
@@ -49,9 +49,10 @@ const EyeBrows = () => {
   const handleAddToCart = (product) => {
     const productToAdd = {
       ...product,
-      quantity: 1
+      quantity: 1,
+      price: parsePrice(product.price)
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'EyeBrows');
   };
 
   return (

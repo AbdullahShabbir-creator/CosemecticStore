@@ -11,7 +11,7 @@ const EyeCreams = () => {
       id: 1,
       name: "Hydrating Eye Cream",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://saeedghani.pk/cdn/shop/files/Eye-Cream_Edit.jpg?v=1741786692https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Intensive hydration for the delicate eye area",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const EyeCreams = () => {
       id: 2,
       name: "Anti-Aging Eye Cream",
       price: 34.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFVy83HWYtwQJ_LBgxUX-nXehoZeRAdDBdQg&shttps://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/him/him50077/y/45.jpghttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Formulated with anti-aging ingredients",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const EyeCreams = () => {
       id: 3,
       name: "Dark Circle Eye Cream",
       price: 32.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWTLsHeR5criZCY2CJ3tTRWmpApg7cXrw8rg&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Targeted treatment for dark circles",
       rating: 4.7,
       reviews: 195

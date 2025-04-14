@@ -11,7 +11,7 @@ const HairMasks = () => {
       id: 1,
       name: "Hydrating Hair Mask",
       price: 34.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://m.media-amazon.com/images/I/71HTHDUta1L._SL1500_.jpg",
       description: "Intensive moisture treatment for dry hair",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const HairMasks = () => {
       id: 2,
       name: "Repair Hair Mask",
       price: 39.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://ameena.pk/cdn/shop/files/3_69aeb913-2776-4cf5-8015-4fff54cf612a_2.webp?v=1721929227",
       description: "Deep conditioning for damaged hair",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const HairMasks = () => {
       id: 3,
       name: "Nourishing Hair Mask",
       price: 44.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOK-EpjofP9UeuX1AqmJHx1CwNBd_njxLbDg&s",
       description: "Intensive nourishment for all hair types",
       rating: 4.7,
       reviews: 195
@@ -41,7 +41,7 @@ const HairMasks = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'HairMasks');
   };
 
   return (

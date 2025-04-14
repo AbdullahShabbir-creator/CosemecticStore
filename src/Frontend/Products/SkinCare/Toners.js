@@ -11,7 +11,7 @@ const Toners = () => {
       id: 1,
       name: "Balancing Toner",
       price: 22.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://www.nirvanabotanics.com/cdn/shop/files/Pink-Toner_02.jpg?v=1726491931https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Restores skin's natural pH balance",
       rating: 4.8,
       reviews: 215
@@ -20,7 +20,7 @@ const Toners = () => {
       id: 2,
       name: "Hydrating Toner",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://bnbderma.com/cdn/shop/files/glycolic.jpg?v=1734510888https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Lightweight formula for all skin types",
       rating: 4.9,
       reviews: 195
@@ -29,7 +29,7 @@ const Toners = () => {
       id: 3,
       name: "Pore Minimizing Toner",
       price: 26.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://www.nirvanabotanics.com/cdn/shop/files/glowtonerpakistan.png?v=1741453660https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Helps reduce the appearance of pores",
       rating: 4.7,
       reviews: 175

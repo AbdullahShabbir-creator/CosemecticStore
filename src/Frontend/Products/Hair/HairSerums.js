@@ -11,7 +11,7 @@ const HairSerums = () => {
       id: 1,
       name: "Anti-Frizz Serum",
       price: 34.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://organicpromise.pk/cdn/shop/products/hair-serum-op.jpg?v=1654811581",
       description: "Controls frizz and flyaways",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const HairSerums = () => {
       id: 2,
       name: "Hydrating Serum",
       price: 32.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrHfsngDFhWe3-WmDhG9aqIEAM67Q7fdvGQQ&s",
       description: "Intensive hydration for dry hair",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const HairSerums = () => {
       id: 3,
       name: "Nourishing Serum",
       price: 36.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCvDVggPXfeyFmdoCj2lJFbsFP0MOiP5-4xA&s",
       description: "Deep nourishment for all hair types",
       rating: 4.7,
       reviews: 195
@@ -41,7 +41,7 @@ const HairSerums = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'HairSerums');
   };
 
   return (

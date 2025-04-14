@@ -11,7 +11,7 @@ const FaceHighlighters = () => {
       id: 1,
       name: "Illuminating Highlighter",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://www.inglotpk.com/cdn/shop/products/intense-sparkler-face-eyes-body-highlighter_1_458x.png?v=1735715131",
       description: "Gives a natural glow to your skin",
       rating: 4.8,
       reviews: 156
@@ -20,7 +20,7 @@ const FaceHighlighters = () => {
       id: 2,
       name: "Bronze Glow Highlighter",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://nuvari.pk/cdn/shop/files/Highlighter-_Cotton-Candy.gif?v=1740998094&width=600",
       description: "Adds a warm, bronzed glow to your skin",
       rating: 4.7,
       reviews: 128
@@ -29,7 +29,7 @@ const FaceHighlighters = () => {
       id: 3,
       name: "Rose Gold Highlighter",
       price: 32.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://theblushstore.pk/cdn/shop/files/Charlotte_Tilbury_Hollywood_Glow_Glide_Face_Architect_Highlighter_-_glided_glow.png?v=1723993461&width=1400",
       description: "Luxurious rose gold finish for all skin tones",
       rating: 4.9,
       reviews: 95

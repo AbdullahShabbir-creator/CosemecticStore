@@ -11,7 +11,7 @@ const FaceMasks = () => {
       id: 1,
       name: "Hydrating Sheet Mask",
       price: 19.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqqfWthcQ_Z1cJBvFGdWvOgE2-Vm7Md38ZMw&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Intensive hydration for dry skin",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const FaceMasks = () => {
       id: 2,
       name: "Charcoal Purifying Mask",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbRSL--rMJlcsDDnMHLf-Zzdca2WgGwvvChlEXtchFZCqo7L2LugRfih0jQN05QtSVDTQ&usqp=CAUhttps://images.squarespace-cdn.com/content/v1/5c4f6ba1e2ccd1ee6075495d/83bfd75e-3e51-4f26-afa7-30db2a532f68/woman-sheet-face-mask.jpghttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Deep cleansing mask for oily skin",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const FaceMasks = () => {
       id: 3,
       name: "Glow Sheet Mask",
       price: 22.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-14_L4Vq47GsChy_Kb2uTWTyJrmDdFDSbD9JQiFK-eOtTaDZSQQLEJRTrLDqhm7S-bQU&usqp=CAUhttps://feeds.abplive.com/onecms/images/uploaded-images/2023/02/19/778ca958ea2e2fcf2e59ffb0c2420458f12cb.jpeghttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Radiant skin in just 15 minutes",
       rating: 4.7,
       reviews: 195

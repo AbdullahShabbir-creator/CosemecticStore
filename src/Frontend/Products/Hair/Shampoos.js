@@ -11,7 +11,7 @@ const Shampoos = () => {
       id: 1,
       name: "Hydrating Shampoo",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://allurebeauty.pk/cdn/shop/files/1256417-1-688601.jpg?v=1711022683&width=320https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Deep hydration for dry hair",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const Shampoos = () => {
       id: 2,
       name: "Anti-Dandruff Shampoo",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://reana.pk/cdn/shop/files/Hyaluronicshampoofrontandback_6008be13-cf73-43c4-b69f-fb9aec5e0c56.webp?v=1689852649https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Formulated to combat dandruff",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const Shampoos = () => {
       id: 3,
       name: "Volume Shampoo",
       price: 32.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://m.media-amazon.com/images/I/41H5QxUZNsL._SL500_.jpg",
       description: "Adds volume and body to fine hair",
       rating: 4.7,
       reviews: 195
@@ -41,7 +41,7 @@ const Shampoos = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'Shampoos');
   };
 
   return (

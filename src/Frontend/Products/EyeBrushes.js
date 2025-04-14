@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../Context/CartContext';
 import './FacePowders.css';
 
 const EyeBrushes = () => {
+  const { addToCart } = useCart();
+  
   const products = [
     {
       id: 1,
       name: "Eyeshadow Brush",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCfP_06Aw66yYxXO9fZcN3c9IIAXsyzEAGmw&s",
       description: "Soft eyeshadow application brush",
       rating: 4.8,
       reviews: 215
@@ -17,7 +20,7 @@ const EyeBrushes = () => {
       id: 2,
       name: "Eyebrow Brush",
       price: "$19.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://otwoo.com.pk/cdn/shop/products/product-image-1775467194.jpg?v=1623216536&width=2400https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Dual-ended eyebrow brush with spoolie",
       rating: 4.9,
       reviews: 245
@@ -26,12 +29,31 @@ const EyeBrushes = () => {
       id: 3,
       name: "Smudge Brush",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9lhWbrXPPsjzeJOgxMA1MLN3uEm8UX7Rx7w&shttps://www.gosupps.com/media/catalog/product/cache/25/image/1500x/040ec09b1e35df139433887a97daa66f/5/1/51ecjCGhxiL.jpghttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Precision smudge brush for eyeliners",
       rating: 4.7,
       reviews: 198
     }
   ];
+
+  // Parse price for cart
+  const parsePrice = (price) => {
+    if (typeof price === 'string') {
+      // Remove currency symbol and convert to number
+      return parseFloat(price.replace(/[^0-9.]/g, ''));
+    }
+    return price; // If it's already a number
+  };
+
+  // Handle add to cart
+  const handleAddToCart = (product) => {
+    const productToAdd = {
+      ...product,
+      quantity: 1,
+      price: parsePrice(product.price)
+    };
+    addToCart(productToAdd, 'EyeBrushes');
+  };
 
   return (
     <div className="face-powders-container">
@@ -54,7 +76,10 @@ const EyeBrushes = () => {
                   <button className="quick-view-btn">
                     <i className="fa-solid fa-eye"></i> Quick View
                   </button>
-                  <button className="add-to-cart-btn">
+                  <button 
+                    className="add-to-cart-btn"
+                    onClick={() => handleAddToCart(product)}
+                  >
                     <i className="fa-solid fa-cart-plus"></i> Add to Cart
                   </button>
                 </div>

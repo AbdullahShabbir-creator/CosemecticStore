@@ -11,7 +11,7 @@ const EyePencils = () => {
       id: 1,
       name: "Eyebrow Pencil",
       price: "$19.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbNrzyH34YAl2mokMnHgRhPDdFeiGRfwxAxg&sash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Long-lasting eyebrow pencil with sharpener",
       rating: 4.7,
       reviews: 215
@@ -20,7 +20,7 @@ const EyePencils = () => {
       id: 2,
       name: "Eyeliner Pencil",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/shopsy-kajal/o/9/f/5-professional-bold-black-eye-pencil-kajal-felicechiara-original-imah4ykgnsrpz3bd.jpeg?q=90&crop=false",
       description: "Soft and blendable eyeliner pencil",
       rating: 4.8,
       reviews: 198
@@ -29,19 +29,24 @@ const EyePencils = () => {
       id: 3,
       name: "Eyeshadow Pencil",
       price: "$29.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFNvfSSEArr1McneRyyUPATYJkAm82WdfEvw&s",
       description: "Dual-purpose eyeshadow and eyeliner pencil",
       rating: 4.9,
       reviews: 245
     }
   ];
 
+  const parsePrice = (price) => {
+    return parseFloat(price.replace('$', ''));
+  };
+
   const handleAddToCart = (product) => {
     const productToAdd = {
       ...product,
-      quantity: 1
+      quantity: 1,
+      price: parsePrice(product.price)
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'EyePencils');
   };
 
   return (

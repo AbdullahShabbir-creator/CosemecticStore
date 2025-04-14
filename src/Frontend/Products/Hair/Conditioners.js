@@ -11,7 +11,7 @@ const Conditioners = () => {
       id: 1,
       name: "Hydrating Conditioner",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZNeoyeLbHbT8XaRxjPHW3mx43BOutyI7Jnw&s",
       description: "Intensive moisture for dry hair",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const Conditioners = () => {
       id: 2,
       name: "Anti-Dandruff Conditioner",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "http://m.media-amazon.com/images/I/31nt5iti2hL.jpg",
       description: "Soothing formula for itchy scalp",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const Conditioners = () => {
       id: 3,
       name: "Volume Conditioner",
       price: 32.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHmaIAbMiAaEDB3JYEMDIaBotnlM4K0FsseBQGhZedS7g7aJVeJrPOM4WAg2B4ujNKUo0&usqp=CAU",
       description: "Lightweight formula for fine hair",
       rating: 4.7,
       reviews: 195
@@ -41,7 +41,7 @@ const Conditioners = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'Conditioners');
   };
 
   return (

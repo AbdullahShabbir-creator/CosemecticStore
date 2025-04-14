@@ -11,7 +11,7 @@ const Serums = () => {
       id: 1,
       name: "Vitamin C Serum",
       price: 39.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://www.alezem.com/cdn/shop/products/1_f73cef40-99db-48d3-837d-0f2a7ee9de74.png?v=1581328747https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Brightening serum with 20% Vitamin C",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const Serums = () => {
       id: 2,
       name: "Hyaluronic Acid Serum",
       price: 34.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW3VspSwpU_pYlGMFiQM6vaZCPrvYPPjJbcg&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Intensive hydration for all skin types",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const Serums = () => {
       id: 3,
       name: "Retinol Serum",
       price: 44.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0dsIrNA9XHDqlRlN_eJBxF-m6E7rQmqDaIA&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Anti-aging serum with 2% retinol",
       rating: 4.7,
       reviews: 195

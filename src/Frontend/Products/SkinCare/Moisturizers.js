@@ -11,7 +11,7 @@ const Moisturizers = () => {
       id: 1,
       name: "Hydrating Day Cream",
       price: 34.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://bloomify.pk/cdn/shop/files/TOLERIANE_DOUBLE_REPAIR_FACIAL_MOISTURIZER_WITH_SPF_30_75ml_50._800x.png?v=1716146228https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Lightweight formula for all skin types",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const Moisturizers = () => {
       id: 2,
       name: "Night Repair Cream",
       price: 39.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHU_DNvpiYLFqZkXh4jYIAAVmd5N2pB9uG5Q&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Intensive overnight hydration",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const Moisturizers = () => {
       id: 3,
       name: "Anti-Aging Moisturizer",
       price: 44.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://glowbeauty.pk/cdn/shop/files/nirvana-botanics-skin-care-nirvana-botanics-whipped-moisturizer-cream-50g-39364999971073_600x.jpg?v=1706688725https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Formulated with anti-aging ingredients",
       rating: 4.7,
       reviews: 195

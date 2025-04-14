@@ -12,7 +12,7 @@ const CleansingSponges = () => {
       id: 1,
       name: "Silicone Cleansing Brush",
       price: "$29.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUsuaYVoLp8Odzvp0tmK7nAF7XHtI_-dT6wg&s",
       description: "Advanced silicone cleansing brush for deep cleaning",
       rating: 4.8,
       reviews: 215,
@@ -27,7 +27,7 @@ const CleansingSponges = () => {
       id: 2,
       name: "Konjac Sponge",
       price: "$14.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQz2gpy_4ZC2JlG1EEviOjFiDNarLb0mg3Ag&s",
       description: "Natural konjac sponge for gentle cleansing",
       rating: 4.6,
       reviews: 189,
@@ -42,7 +42,7 @@ const CleansingSponges = () => {
       id: 3,
       name: "Cleansing Sponge Set",
       price: "$34.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq2ubFcCX3UJ_qn10OMTX1KtxSEjkE20FNdA&s",
       description: "Complete set of cleansing tools",
       rating: 4.9,
       reviews: 245,
@@ -60,7 +60,7 @@ const CleansingSponges = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'CleansingSponges');
   };
 
   return (

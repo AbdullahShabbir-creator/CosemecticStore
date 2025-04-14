@@ -12,7 +12,7 @@ const FalseEyelashes = () => {
       id: 1,
       name: "Natural False Eyelashes",
       price: "$19.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDWMlXhewfp8h3X4uyOvVeOgDUGZXkzc6-qw&s",
       description: "Natural-looking false eyelashes for everyday wear",
       rating: 4.8,
       reviews: 215,
@@ -27,7 +27,7 @@ const FalseEyelashes = () => {
       id: 2,
       name: "Party False Eyelashes",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjNUpjQNc1kukurY6u5shHy89pDKHYJqhGRA&s",
       description: "Dramatic false eyelashes for special occasions",
       rating: 4.6,
       reviews: 189,
@@ -42,7 +42,7 @@ const FalseEyelashes = () => {
       id: 3,
       name: "False Eyelashes Set",
       price: "$34.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqIpaFlzIVCRmUOgeFt8M7ihhL82vVzM5Mdg&s",
       description: "Complete set of false eyelashes for all occasions",
       rating: 4.9,
       reviews: 245,
@@ -60,7 +60,7 @@ const FalseEyelashes = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'FalseEyelashes');
   };
 
   return (

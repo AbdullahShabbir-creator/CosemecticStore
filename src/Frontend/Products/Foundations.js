@@ -11,7 +11,7 @@ const Foundations = () => {
       id: 1,
       name: "Matte Foundation",
       price: 39.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://www.makeupgallery.pk/cdn/shop/files/89oi90.jpg?v=1744216714&width=330",
       description: "Long-lasting matte finish foundation",
       rating: 4.9,
       reviews: 315
@@ -20,7 +20,7 @@ const Foundations = () => {
       id: 2,
       name: "Hydrating Foundation",
       price: 44.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://www.trendify.pk/cdn/shop/products/th_13a6aa78-dc89-4be2-96f8-3fc841a1848d.jpg?v=1662031083://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Water-based foundation for dry skin",
       rating: 4.8,
       reviews: 285
@@ -29,7 +29,7 @@ const Foundations = () => {
       id: 3,
       name: "Full Coverage Foundation",
       price: 49.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://lfactorcosmetics.com/cdn/shop/files/1Product.png?v=1700723201&width=535",
       description: "Buildable coverage foundation for all skin types",
       rating: 4.7,
       reviews: 245
@@ -41,7 +41,7 @@ const Foundations = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'Foundation');
   };
 
   return (

@@ -11,7 +11,7 @@ const LipGlosses = () => {
       id: 1,
       name: "Shimmer Lip Gloss",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://pierrecardin.pk/cdn/shop/files/11305-00_1.jpg?v=1744109113",
       description: "High-shine formula with fine shimmer particles",
       rating: 4.8,
       reviews: 215
@@ -20,7 +20,7 @@ const LipGlosses = () => {
       id: 2,
       name: "Matte Lip Gloss",
       price: "$29.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://www.makeupcityshop.com/cdn/shop/products/5057566434782-3.jpg?v=1708598969",
       description: "Long-lasting matte finish gloss",
       rating: 4.9,
       reviews: 245
@@ -29,7 +29,7 @@ const LipGlosses = () => {
       id: 3,
       name: "Cream Lip Gloss",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://www.makeupcityshop.com/cdn/shop/products/5057566434782.jpg?v=1708598969",
       description: "Moisturizing formula with natural shine",
       rating: 4.7,
       reviews: 198
@@ -47,19 +47,12 @@ const LipGlosses = () => {
 
   // Handle add to cart
   const handleAddToCart = (product) => {
-    const cartItem = {
-      id: product.id,
-      name: product.name,
-      price: parsePrice(product.price),
-      image: product.image,
-      description: product.description,
-      quantity: 1
+    const productToAdd = {
+      ...product,
+      quantity: 1,
+      price: parsePrice(product.price)
     };
-    
-    addToCart(cartItem);
-    
-    // Show alert
-    alert(`${product.name} added to cart!`);
+    addToCart(productToAdd, 'LipGlosses');
   };
 
   return (

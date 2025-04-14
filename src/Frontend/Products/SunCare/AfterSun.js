@@ -11,7 +11,7 @@ const AfterSun = () => {
       id: 1,
       name: "After Sun Cooling Gel",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCmWrfWyYZygJFg5bR6d4jSc9Vc0L-JdcWRA&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Soothing gel for post-sun exposure",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const AfterSun = () => {
       id: 2,
       name: "After Sun Moisturizing Lotion",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0sKXlQyXkFD4P6Sjx05CrAsAbetkBPHtUXg&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Intensive hydration for sun-exposed skin",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const AfterSun = () => {
       id: 3,
       name: "After Sun Repair Cream",
       price: 32.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://ae.clarins.com/dw/image/v2/AAFS_PRD/on/demandware.static/-/Sites-clarins-master-products/default/dw977b4b62/original/80050679_original_original_x.jpg?sw=520&sh=520https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Repair and soothe sun-damaged skin",
       rating: 4.7,
       reviews: 195
@@ -41,7 +41,7 @@ const AfterSun = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'AfterSun');
   };
 
   return (

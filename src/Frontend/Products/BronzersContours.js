@@ -11,7 +11,7 @@ const BronzersContours = () => {
       id: 1,
       name: "Bronzing Powder",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://discountstore.pk/cdn/shop/files/41NdkYUCWuL.jpg?v=1723043005",
       description: "Natural-looking bronzer for a sun-kissed glow",
       rating: 4.8,
       reviews: 215
@@ -20,7 +20,7 @@ const BronzersContours = () => {
       id: 2,
       name: "Contour Palette",
       price: 34.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://discountstore.pk/cdn/shop/files/41NdkYUCWuL.jpg?v=1723043005",
       description: "Professional contour palette with multiple shades",
       rating: 4.9,
       reviews: 195
@@ -29,7 +29,7 @@ const BronzersContours = () => {
       id: 3,
       name: "Cream Bronzer",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://makeupmistress.pk/cdn/shop/products/0238a_6.jpg?v=1651132684",
       description: "Long-lasting cream formula for natural contouring",
       rating: 4.7,
       reviews: 175
@@ -41,7 +41,7 @@ const BronzersContours = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'BronzersContours');
   };
 
   return (

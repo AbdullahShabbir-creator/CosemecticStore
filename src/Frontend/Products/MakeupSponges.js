@@ -12,7 +12,7 @@ const MakeupSponges = () => {
       id: 1,
       name: "Premium Beauty Blender",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwTrw1P21nKTT9MzY_dJhxMRw6dlObtyjBVQ&s",
       description: "Professional makeup sponge for flawless application",
       rating: 4.8,
       reviews: 215,
@@ -27,7 +27,7 @@ const MakeupSponges = () => {
       id: 2,
       name: "Silicone Makeup Sponge",
       price: "$19.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwhtfeOVD1C10aeLJAhy254f-5WWykG57OYA&s",
       description: "Silicone sponge for precise foundation application",
       rating: 4.6,
       reviews: 189,
@@ -42,7 +42,7 @@ const MakeupSponges = () => {
       id: 3,
       name: "Makeup Applicator Set",
       price: "$29.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://lotshop.pk/cdn/shop/files/branded-professional-makeup-brushes-by-weight-ultra-soft-available-in-kgs-110647.jpg?v=1740325490&width=533",
       description: "Complete set of makeup applicators",
       rating: 4.9,
       reviews: 245,
@@ -60,7 +60,7 @@ const MakeupSponges = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'MakeupSponges');
   };
 
   return (

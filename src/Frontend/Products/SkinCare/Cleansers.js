@@ -11,7 +11,7 @@ const Cleansers = () => {
       id: 1,
       name: "Gentle Cleansing Milk",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoEe3By8aPIaQNJ0jqYPdDUoKaVocBFEC_lA&sttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Gentle formula for all skin types",
       rating: 4.8,
       reviews: 215
@@ -20,7 +20,7 @@ const Cleansers = () => {
       id: 2,
       name: "Foaming Face Wash",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOTRGvi3v69TxCBcHmyyAADkTCGH9hk9k4hA&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Deep cleansing foaming formula",
       rating: 4.9,
       reviews: 195
@@ -29,7 +29,7 @@ const Cleansers = () => {
       id: 3,
       name: "Micellar Water",
       price: 22.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://bnbderma.com/cdn/shop/files/3_2ae5e5ef-f7e1-49bc-912d-0f0b1aff8a1e.png?v=1734509162https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Gentle makeup remover and cleanser",
       rating: 4.7,
       reviews: 175

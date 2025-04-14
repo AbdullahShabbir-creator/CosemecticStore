@@ -11,7 +11,7 @@ const HairOils = () => {
       id: 1,
       name: "Argan Oil",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMhjKo1tN2j7jnL_fz-Ny1VftGP0WyS7W32g&s",
       description: "Deeply nourishing for all hair types",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const HairOils = () => {
       id: 2,
       name: "Coconut Oil",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRnYixJokMN3Z-_3eqsYV-gIue79LnxN-4QHAI412l90zWMWPMw3JU8ahyLM21QG_iGsg&usqp=CAU",
       description: "Natural conditioning and shine",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const HairOils = () => {
       id: 3,
       name: "Castor Oil",
       price: 26.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE8uCj0R0bLmS7gdSNHf7hXj6QEsbVvebvuw&s",
       description: "Promotes hair growth and strength",
       rating: 4.7,
       reviews: 195
@@ -41,7 +41,7 @@ const HairOils = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'HairOils');
   };
 
   return (

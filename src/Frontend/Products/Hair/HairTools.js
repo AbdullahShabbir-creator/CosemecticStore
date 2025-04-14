@@ -11,7 +11,7 @@ const HairTools = () => {
       id: 1,
       name: "Professional Hair Dryer",
       price: 129.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVLPcpE6XYKwAWDkKj35UMe2hSnAtJxhYhWg&s",
       description: "Powerful and professional-grade",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const HairTools = () => {
       id: 2,
       name: "Curling Iron",
       price: 99.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSYjp5FfWyY3_y5lrsV4qnBeaeyd7looSDcA&s",
       description: "Professional styling tool",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const HairTools = () => {
       id: 3,
       name: "Hair Straightener",
       price: 119.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://kiswa.pk/wp-content/uploads/2022/04/2-in-1-Hair-Styling-Comb-Straightener-Hair-Brush-Online-Best-Price-In-Pakistan.jpg",
       description: "Professional-grade styling tool",
       rating: 4.7,
       reviews: 195
@@ -41,7 +41,7 @@ const HairTools = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'HairTools');
   };
 
   return (

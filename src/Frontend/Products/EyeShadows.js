@@ -11,7 +11,7 @@ const EyeShadows = () => {
       id: 1,
       name: "Matte Eyeshadow Palette",
       price: "$34.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://images.ctfassets.net/wlke2cbybljx/3dREGg2g7ydNpB4X9n2Zr4/882ee53857827b390d9d2ee874309475/BELLASOFIA.jpg",
       description: "Versatile matte shades for everyday looks",
       rating: 4.8,
       reviews: 215
@@ -20,7 +20,7 @@ const EyeShadows = () => {
       id: 2,
       name: "Shimmer Eyeshadow Palette",
       price: "$39.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://m.media-amazon.com/images/I/81gM3HUH51L._SL1500_.jpg",
       description: "Dazzling shimmer shades for glamorous looks",
       rating: 4.9,
       reviews: 245
@@ -29,7 +29,7 @@ const EyeShadows = () => {
       id: 3,
       name: "Cream Eyeshadow",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIVXrWa2_fHrEvXIus_SERjbaSG_GOuhuHzQ&s",
       description: "Long-lasting cream formula for intense color",
       rating: 4.7,
       reviews: 198
@@ -49,9 +49,10 @@ const EyeShadows = () => {
   const handleAddToCart = (product) => {
     const productToAdd = {
       ...product,
-      quantity: 1
+      quantity: 1,
+      price: parsePrice(product.price)
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'EyeShadows');
   };
 
   return (

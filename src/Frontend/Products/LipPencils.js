@@ -11,7 +11,7 @@ const LipPencils = () => {
       id: 1,
       name: "Matte Lip Pencil",
       price: "$19.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://img.drz.lazcdn.com/static/pk/p/8cd7f50eaf9a8b2d0e946e2d4a30c395.jpg_720x720q80.jpg",
       description: "Long-lasting matte lip liner",
       rating: 4.8,
       reviews: 215
@@ -20,7 +20,7 @@ const LipPencils = () => {
       id: 2,
       name: "Creamy Lip Pencil",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN5e6zcisD-GGiQ2pW29AbmMOpOu95_7nViQ&s",
       description: "Smooth application with creamy texture",
       rating: 4.9,
       reviews: 245
@@ -29,7 +29,7 @@ const LipPencils = () => {
       id: 3,
       name: "Waterproof Lip Pencil",
       price: "$29.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQQqPumk2HUIMmXAz1lVqcq3-7V3xCHVyBMA&s",
       description: "Waterproof formula for long-lasting wear",
       rating: 4.7,
       reviews: 198
@@ -47,19 +47,12 @@ const LipPencils = () => {
 
   // Handle add to cart
   const handleAddToCart = (product) => {
-    const cartItem = {
-      id: product.id,
-      name: product.name,
-      price: parsePrice(product.price),
-      image: product.image,
-      description: product.description,
-      quantity: 1
+    const productToAdd = {
+      ...product,
+      quantity: 1,
+      price: parsePrice(product.price)
     };
-    
-    addToCart(cartItem);
-    
-    // Show alert
-    alert(`${product.name} added to cart!`);
+    addToCart(productToAdd, 'LipPencils');
   };
 
   return (

@@ -11,7 +11,7 @@ const LipSticks = () => {
       id: 1,
       name: "Matte Lipstick",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHNqREEBdWHIvMJnz2jXCrxHU7oi2sl4cjwg&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Long-lasting matte formula",
       rating: 4.8,
       reviews: 215
@@ -20,7 +20,7 @@ const LipSticks = () => {
       id: 2,
       name: "Glossy Lipstick",
       price: "$29.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPOUVA5uyk3Vp_1ufvWp7qQlqxrRmDyzlFeg&s",
       description: "Radiant finish with natural shine",
       rating: 4.9,
       reviews: 245
@@ -29,7 +29,7 @@ const LipSticks = () => {
       id: 3,
       name: "Cream Lipstick",
       price: "$34.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRBDCMfZXo4tm8SMTdZx419pTi81O6NWisqQ&s",
       description: "Moisturizing formula with smooth texture",
       rating: 4.7,
       reviews: 198
@@ -49,9 +49,10 @@ const LipSticks = () => {
   const handleAddToCart = (product) => {
     const productToAdd = {
       ...product,
-      quantity: 1
+      quantity: 1,
+      price: parsePrice(product.price)
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'LipSticks');
   };
 
   return (

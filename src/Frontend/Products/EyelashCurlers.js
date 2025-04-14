@@ -12,7 +12,7 @@ const EyelashCurlers = () => {
       id: 1,
       name: "Professional Eyelash Curler",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://img.drz.lazcdn.com/static/pk/p/bcca230059325fd472d9b4cd4644a573.jpg_720x720q80.jpg_.webp",
       description: "Professional-grade eyelash curler for perfect curls",
       rating: 4.8,
       reviews: 215,
@@ -27,7 +27,7 @@ const EyelashCurlers = () => {
       id: 2,
       name: "Travel Eyelash Curler",
       price: "$19.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFvqqRXrufaJLHOr6HD_zoQsYepGLcq0Vj4w&s",
       description: "Compact eyelash curler for on-the-go use",
       rating: 4.6,
       reviews: 189,
@@ -42,7 +42,7 @@ const EyelashCurlers = () => {
       id: 3,
       name: "Eyelash Curler Set",
       price: "$39.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2UTk_Jk7WC3qEsG9FJgXlqicSYTqLDmxyug&s",
       description: "Complete set of eyelash curling tools",
       rating: 4.9,
       reviews: 245,
@@ -60,7 +60,7 @@ const EyelashCurlers = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'EyelashCurlers');
   };
 
   return (

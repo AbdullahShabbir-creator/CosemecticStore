@@ -11,7 +11,7 @@ const Sunscreens = () => {
       id: 1,
       name: "SPF 50 Sunscreen",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://bloomify.pk/cdn/shop/files/CeraVeAMFacialMoisturizingLotionwithSunscreen89ml_800x.png?v=1716480255https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Broad spectrum protection for all skin types",
       rating: 4.8,
       reviews: 156
@@ -20,7 +20,7 @@ const Sunscreens = () => {
       id: 2,
       name: "Water-Resistant Sunscreen",
       price: 34.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://zavi.skin/cdn/shop/files/Anthelios50-kids.webp?v=1701672649",
       description: "Long-lasting protection for outdoor activities",
       rating: 4.7,
       reviews: 128
@@ -29,7 +29,7 @@ const Sunscreens = () => {
       id: 3,
       name: "Daily Moisturizing Sunscreen",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4z56buJBxAPLvT_xZGqcS12ZCwV30qlSVUg&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Lightweight formula for daily use",
       rating: 4.9,
       reviews: 95

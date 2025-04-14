@@ -23,6 +23,7 @@ const Checkout = () => {
         country: 'Pakistan',
         
         // Payment Information
+        paymentMethod: 'Cash on Delivery', // Default to Cash on Delivery
         cardName: '',
         cardNumber: '',
         expiryDate: '',
@@ -34,6 +35,7 @@ const Checkout = () => {
     const [orderId, setOrderId] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [showCardDetails, setShowCardDetails] = useState(false);
     
     const shippingFee = 5.99;
     const tax = cartTotal * 0.05; // 5% tax
@@ -88,7 +90,7 @@ const Checkout = () => {
                 const orderData = {
                     orderItems,
                     shippingAddress,
-                    paymentMethod: 'Cash on Delivery',
+                    paymentMethod: formData.paymentMethod,
                     itemsPrice: parseFloat(cartTotal.toFixed(2)),
                     shippingPrice: parseFloat(shippingFee.toFixed(2)),
                     taxPrice: parseFloat(tax.toFixed(2)),
@@ -362,80 +364,101 @@ const Checkout = () => {
                             <h2>Payment Information</h2>
                             
                             <div className="payment-methods">
-                                <div className="payment-method active">
-                                    <input type="radio" id="creditCard" name="paymentMethod" defaultChecked />
+                                <div className="payment-method">
+                                    <input type="radio" 
+                                        id="creditCard" 
+                                        name="paymentMethod" 
+                                        value="Credit/Debit Card"
+                                        checked={formData.paymentMethod === "Credit/Debit Card"}
+                                        onChange={(e) => {
+                                            handleChange(e);
+                                            setShowCardDetails(true);
+                                        }}
+                                    />
                                     <label htmlFor="creditCard">Credit/Debit Card</label>
                                 </div>
                                 <div className="payment-method">
-                                    <input type="radio" id="cashOnDelivery" name="paymentMethod" />
+                                    <input type="radio" 
+                                        id="cashOnDelivery" 
+                                        name="paymentMethod" 
+                                        value="Cash on Delivery"
+                                        checked={formData.paymentMethod === "Cash on Delivery"}
+                                        onChange={(e) => {
+                                            handleChange(e);
+                                            setShowCardDetails(false);
+                                        }}
+                                    />
                                     <label htmlFor="cashOnDelivery">Cash on Delivery</label>
                                 </div>
                             </div>
                             
-                            <div className="credit-card-form">
-                                <div className="form-group">
-                                    <label htmlFor="cardName">Name on Card*</label>
-                                    <input 
-                                        type="text" 
-                                        id="cardName" 
-                                        name="cardName" 
-                                        value={formData.cardName} 
-                                        onChange={handleChange} 
-                                        required 
-                                    />
-                                </div>
-                                
-                                <div className="form-group">
-                                    <label htmlFor="cardNumber">Card Number*</label>
-                                    <input 
-                                        type="text" 
-                                        id="cardNumber" 
-                                        name="cardNumber" 
-                                        value={formData.cardNumber} 
-                                        onChange={handleChange} 
-                                        placeholder="XXXX XXXX XXXX XXXX" 
-                                        required 
-                                    />
-                                </div>
-                                
-                                <div className="form-row">
+                            {showCardDetails && (
+                                <div className="credit-card-form">
                                     <div className="form-group">
-                                        <label htmlFor="expiryDate">Expiry Date*</label>
+                                        <label htmlFor="cardName">Name on Card*</label>
                                         <input 
                                             type="text" 
-                                            id="expiryDate" 
-                                            name="expiryDate" 
-                                            value={formData.expiryDate} 
+                                            id="cardName" 
+                                            name="cardName" 
+                                            value={formData.cardName} 
                                             onChange={handleChange} 
-                                            placeholder="MM/YY" 
                                             required 
                                         />
                                     </div>
+                                    
                                     <div className="form-group">
-                                        <label htmlFor="cvv">CVV*</label>
+                                        <label htmlFor="cardNumber">Card Number*</label>
                                         <input 
                                             type="text" 
-                                            id="cvv" 
-                                            name="cvv" 
-                                            value={formData.cvv} 
+                                            id="cardNumber" 
+                                            name="cardNumber" 
+                                            value={formData.cardNumber} 
                                             onChange={handleChange} 
-                                            placeholder="123" 
+                                            placeholder="XXXX XXXX XXXX XXXX" 
                                             required 
                                         />
                                     </div>
+                                    
+                                    <div className="form-row">
+                                        <div className="form-group">
+                                            <label htmlFor="expiryDate">Expiry Date*</label>
+                                            <input 
+                                                type="text" 
+                                                id="expiryDate" 
+                                                name="expiryDate" 
+                                                value={formData.expiryDate} 
+                                                onChange={handleChange} 
+                                                placeholder="MM/YY" 
+                                                required 
+                                            />
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="cvv">CVV*</label>
+                                            <input 
+                                                type="password" 
+                                                id="cvv" 
+                                                name="cvv" 
+                                                value={formData.cvv} 
+                                                onChange={handleChange} 
+                                                required 
+                                            />
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="form-group">
+                                        <label>
+                                            <input 
+                                                type="checkbox" 
+                                                id="savePaymentInfo" 
+                                                name="savePaymentInfo" 
+                                                checked={formData.savePaymentInfo} 
+                                                onChange={handleChange}
+                                            />
+                                            Save this payment information for future use
+                                        </label>
+                                    </div>
                                 </div>
-                                
-                                <div className="form-group checkbox">
-                                    <input 
-                                        type="checkbox" 
-                                        id="savePaymentInfo" 
-                                        name="savePaymentInfo" 
-                                        checked={formData.savePaymentInfo} 
-                                        onChange={handleChange} 
-                                    />
-                                    <label htmlFor="savePaymentInfo">Save this card for future payments</label>
-                                </div>
-                            </div>
+                            )}
                             
                             <div className="form-actions">
                                 <button type="button" className="back-btn" onClick={handleBack}>

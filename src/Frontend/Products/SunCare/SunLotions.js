@@ -11,7 +11,7 @@ const SunLotions = () => {
       id: 1,
       name: "After Sun Soothing Lotion",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa7tkqBZIN6Zxp1W24mW25V6o5T6p_NW6kVQ&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Calming lotion for post-sun exposure",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const SunLotions = () => {
       id: 2,
       name: "Hydrating Sun Lotion",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvJFXYJ4hGBkJfgnB-VguDR_gB6Vwsc2stFw&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Intensive hydration for sun-exposed skin",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const SunLotions = () => {
       id: 3,
       name: "Sun Repair Lotion",
       price: 32.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9p771E-ZMhjlWl2yVH7G2X7LWOxqv5Rj7rg&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvJFXYJ4hGBkJfgnB-VguDR_gB6Vwsc2stFw&shttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Repair and protect sun-damaged skin",
       rating: 4.7,
       reviews: 195
@@ -41,7 +41,7 @@ const SunLotions = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'SunLotions');
   };
 
   return (

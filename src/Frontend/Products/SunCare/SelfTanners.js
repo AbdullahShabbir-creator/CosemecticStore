@@ -11,7 +11,7 @@ const SelfTanners = () => {
       id: 1,
       name: "Gradual Tan Lotion",
       price: 29.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://m.media-amazon.com/images/I/61xw-USpkHL._SL1500_.jpg",
       description: "Builds a natural-looking tan gradually",
       rating: 4.9,
       reviews: 245
@@ -20,7 +20,7 @@ const SelfTanners = () => {
       id: 2,
       name: "Express Tan Mousse",
       price: 34.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://m.media-amazon.com/images/I/71VZcFDEvTL._AC_UF1000,1000_QL80_.jpg",
       description: "Quick-drying formula for instant results",
       rating: 4.8,
       reviews: 215
@@ -29,7 +29,7 @@ const SelfTanners = () => {
       id: 3,
       name: "Face Tan Drops",
       price: 24.99,
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://images-cdn.ubuy.ae/6371d12928f1a254c425601f-kenmiler-natural-glow-self-tanner-medium.jpghttps://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Customizable tan for the face",
       rating: 4.7,
       reviews: 195
@@ -41,7 +41,7 @@ const SelfTanners = () => {
       ...product,
       quantity: 1
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'SelfTanners');
   };
 
   return (

@@ -10,8 +10,8 @@ const FaceBrushes = () => {
     {
       id: 1,
       name: "Foundation Brush",
-      price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      price: "24.99",
+      image: "https://cdn.thewirecutter.com/wp-content/media/2024/10/makeupbrushes-2048px-01010-3x2-1.jpg?auto=webp&quality=75&crop=3:2&width=1024https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Professional foundation brush for flawless application",
       rating: 4.8,
       reviews: 215
@@ -19,8 +19,8 @@ const FaceBrushes = () => {
     {
       id: 2,
       name: "Powder Brush",
-      price: "$29.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      price: "29.99",
+      image: "https://mohsinsaeedfabrics.pk/cdn/shop/products/Facepremiumbrushset02.jpg?v=1677142487&width=2400https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
       description: "Soft bristles for even powder application",
       rating: 4.9,
       reviews: 245
@@ -28,8 +28,8 @@ const FaceBrushes = () => {
     {
       id: 3,
       name: "Contour Brush",
-      price: "$19.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      price: "19.99",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuEhP81y1gdHWt7kCBlYgwZQTlfqUvOWlEtw&s",
       description: "Angled brush for precise contouring",
       rating: 4.7,
       reviews: 198
@@ -47,19 +47,12 @@ const FaceBrushes = () => {
 
   // Handle add to cart
   const handleAddToCart = (product) => {
-    const cartItem = {
-      id: product.id,
-      name: product.name,
-      price: parsePrice(product.price),
-      image: product.image,
-      description: product.description,
-      quantity: 1
+    const productToAdd = {
+      ...product,
+      quantity: 1,
+      price: parsePrice(product.price)
     };
-    
-    addToCart(cartItem);
-    
-    // Show alert
-    alert(`${product.name} added to cart!`);
+    addToCart(productToAdd, 'FaceBrushes');
   };
 
   return (
@@ -95,7 +88,7 @@ const FaceBrushes = () => {
 
             <div className="product-info">
               <h3 className="product-name">{product.name}</h3>
-              <p className="product-price">{product.price}</p>
+              <p className="product-price">${product.price}</p>
               <div className="product-rating">
                 <i className="fa-solid fa-star"></i>
                 <span>{product.rating}</span>

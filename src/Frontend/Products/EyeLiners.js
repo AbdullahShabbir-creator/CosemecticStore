@@ -11,7 +11,7 @@ const EyeLiners = () => {
       id: 1,
       name: "Liquid Eyeliner",
       price: "$19.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://allurebeauty.pk/cdn/shop/products/lq_e330e354-a556-4bfa-8e79-d0f1b5350a5a.jpg?v=1741204507&width=450",
       description: "Precise liquid liner for defined eyes",
       rating: 4.8,
       reviews: 215
@@ -20,7 +20,7 @@ const EyeLiners = () => {
       id: 2,
       name: "Gel Eyeliner",
       price: "$24.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://artdeco.com/cdn/shop/collections/Kategoriebanner-Eyeliner-Kajal.jpg?v=1695401377&width=1024",
       description: "Long-lasting gel formula with brush",
       rating: 4.9,
       reviews: 245
@@ -29,7 +29,7 @@ const EyeLiners = () => {
       id: 3,
       name: "Waterproof Eyeliner",
       price: "$29.99",
-      image: "https://images.unsplash.com/photo-1573497019587-67d19d5ec8f2",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_vQjkQwUkE07kfznWGw9eMEa8sP1s05S5WA&s",
       description: "Smudge-proof and waterproof formula",
       rating: 4.7,
       reviews: 198
@@ -49,9 +49,10 @@ const EyeLiners = () => {
   const handleAddToCart = (product) => {
     const productToAdd = {
       ...product,
-      quantity: 1
+      quantity: 1,
+      price: parsePrice(product.price)
     };
-    addToCart(productToAdd);
+    addToCart(productToAdd, 'EyeLiners');
   };
 
   return (
