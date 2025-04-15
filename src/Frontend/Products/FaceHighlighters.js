@@ -33,6 +33,15 @@ const FaceHighlighters = () => {
       description: "Luxurious rose gold finish for all skin tones",
       rating: 4.9,
       reviews: 95
+    },
+    {
+      id: 4,
+      name: "Rose Gold Highlighter",
+      price: 32.99,
+      image: "https://theblushstore.pk/cdn/shop/files/Charlotte_Tilbury_Hollywood_Glow_Glide_Face_Architect_Highlighter_-_glided_glow.png?v=1723993461&width=1400",
+      description: "Luxurious rose gold finish for all skin tones",
+      rating: 4.9,
+      reviews: 95
     }
   ];
 

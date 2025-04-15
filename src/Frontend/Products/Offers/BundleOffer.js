@@ -10,7 +10,7 @@ const bundleOffers = [
         name: "Complete Makeup Bundle",
         price: 149.99,
         originalPrice: 239.99,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f2707266",
+        image: "https://m.media-amazon.com/images/I/71gi11m8qHL._SL1500_.jpg",
         description: "Everything you need for a flawless look",
         items: [
             "12-Color Eye Shadow Palette",
@@ -26,7 +26,7 @@ const bundleOffers = [
         name: "Skincare Starter Bundle",
         price: 99.99,
         originalPrice: 159.99,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f2707266",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-i64LICCIDDY_hux3-G8Z5aHyxnQ7jR81fA&s",
         description: "Essential skincare routine in one package",
         items: [
             "Cleanser",
@@ -42,7 +42,7 @@ const bundleOffers = [
         name: "Beauty Essentials Bundle",
         price: 79.99,
         originalPrice: 129.99,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f2707266",
+        image: "https://m.media-amazon.com/images/I/818qpq20JxL._SL1500_.jpg",
         description: "Must-have products for your daily routine",
         items: [
             "Lipstick",

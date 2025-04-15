@@ -8,7 +8,7 @@ const studentDiscounts = [
         name: "Student Makeup Set",
         price: 39.99,
         originalPrice: 59.99,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f2707266",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjW2UJ_M2taVnYThbs-Kq1cqIp9yPAkGCHKw&s",
         description: "Perfect for students - essential makeup products",
         discount: 35,
         studentOnly: true
@@ -18,7 +18,7 @@ const studentDiscounts = [
         name: "Student Skincare Kit",
         price: 29.99,
         originalPrice: 49.99,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f2707266",
+        image: "https://m.media-amazon.com/images/I/614kswvW4CL._SL1500_.jpg",
         description: "Basic skincare routine for students",
         discount: 40,
         studentOnly: true
@@ -28,7 +28,7 @@ const studentDiscounts = [
         name: "Student Travel Size Set",
         price: 24.99,
         originalPrice: 39.99,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f2707266",
+        image: "https://letsglamorize.pk/cdn/shop/collections/Untitled_design_7.png?v=1725349426",
         description: "Perfect for dorm room or travel",
         discount: 40,
         studentOnly: true

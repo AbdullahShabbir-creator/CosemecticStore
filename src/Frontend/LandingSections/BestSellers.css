@@ -1,15 +1,15 @@
-.best-sellers {
+.best-seller-wrapper {
     padding: 4rem 0;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-.section-header {
+.best-seller-header {
     text-align: center;
     margin-bottom: 3rem;
     padding: 0 1rem;
 }
 
-.section-header h2 {
+.best-seller-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #333;
@@ -18,7 +18,7 @@
     display: inline-block;
 }
 
-.section-header h2::after {
+.best-seller-header h2::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -29,7 +29,7 @@
     border-radius: 2px;
 }
 
-.section-header p {
+.best-seller-header p {
     font-size: 1.1rem;
     color: #666;
     max-width: 600px;
@@ -37,7 +37,7 @@
     line-height: 1.6;
 }
 
-.best-sellers-grid {
+.best-seller-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
@@ -70,24 +70,24 @@
     background: linear-gradient(90deg, #e74c3c, #c0392b);
 }
 
-.product-image {
+.best-seller-image {
     height: 220px;
     position: relative;
     overflow: hidden;
 }
 
-.product-image img {
+.best-seller-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.best-seller-card:hover .product-image img {
+.best-seller-card:hover .best-seller-image img {
     transform: scale(1.05);
 }
 
-.product-info {
+.best-seller-info {
     padding: 1.5rem;
     height: 180px;
     display: flex;
@@ -95,7 +95,7 @@
     justify-content: space-between;
 }
 
-.product-info h3 {
+.best-seller-info h3 {
     font-size: 1.3rem;
     color: #2c3e50;
     margin: 0 0 0.5rem 0;
@@ -108,30 +108,30 @@
     -webkit-box-orient: vertical;
 }
 
-.product-rating {
+.best-seller-rating {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
 }
 
-.product-rating i {
+.best-seller-rating i {
     color: #ffd700;
     margin-right: 0.2rem;
     font-size: 0.9rem;
 }
 
-.product-rating i:not(.active) {
+.best-seller-rating i:not(.active) {
     color: #e1e8ed;
 }
 
-.product-rating span {
+.best-seller-rating span {
     color: #34495e;
     font-size: 0.9rem;
     margin-left: 0.5rem;
     opacity: 0.8;
 }
 
-.price {
+.best-seller-price {
     font-size: 1.4rem;
     font-weight: 700;
     color: #2c3e50;
@@ -140,13 +140,13 @@
     align-items: center;
 }
 
-.price::before {
+.best-seller-price::before {
     content: 'PKR';
     font-size: 0.9rem;
     margin-right: 0.2rem;
 }
 
-.add-to-cart-btn {
+.best-seller-btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
     background: linear-gradient(90deg, #e74c3c, #c0392b);
@@ -159,36 +159,36 @@
     letter-spacing: 0.5px;
 }
 
-.add-to-cart-btn:hover {
+.best-seller-btn:hover {
     background: linear-gradient(90deg, #c0392b, #a93126);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
 
 @media (max-width: 768px) {
-    .best-sellers-grid {
+    .best-seller-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
     }
-    
+
     .best-seller-card {
         height: 380px;
     }
-    
-    .product-image {
+
+    .best-seller-image {
         height: 200px;
     }
-    
-    .product-info {
+
+    .best-seller-info {
         height: 160px;
     }
-    
-    .product-info h3 {
+
+    .best-seller-info h3 {
         font-size: 1.2rem;
         height: 35px;
     }
-    
-    .price {
+
+    .best-seller-price {
         font-size: 1.3rem;
     }
 }

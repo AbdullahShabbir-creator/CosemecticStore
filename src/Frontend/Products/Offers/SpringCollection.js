@@ -8,7 +8,7 @@ const springCollection = [
         name: "Spring Bloom Palette",
         price: 49.99,
         originalPrice: 69.99,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f2707266",
+        image: "https://images.squarespace-cdn.com/content/v1/5720ede5555986b16f146642/1679327122336-BTQ4SKJGSK8XO4VFWREC/23+Spring+Magnolia+SQ.jpg",
         description: "Limited edition spring palette with 12 vibrant shades",
         discount: 30
     },
@@ -17,7 +17,7 @@ const springCollection = [
         name: "Fresh Start Skincare Set",
         price: 79.99,
         originalPrice: 119.99,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f2707266",
+        image: "https://target.scene7.com/is/image/Target/GUEST_2d22540a-0d9f-4f45-a251-509e413d2429",
         description: "Complete skincare routine for spring season",
         discount: 35
     },
@@ -26,7 +26,7 @@ const springCollection = [
         name: "Spring Essentials Kit",
         price: 59.99,
         originalPrice: 89.99,
-        image: "https://images.unsplash.com/photo-1572635196237-14b3f2707266",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1pRVPQtwyV7F0s6Cl5GudOGMnafL0mEcZMg&s",
         description: "Perfect starter kit for spring makeup",
         discount: 35
     }

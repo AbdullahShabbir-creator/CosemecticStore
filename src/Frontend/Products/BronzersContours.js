@@ -11,7 +11,7 @@ const BronzersContours = () => {
       id: 1,
       name: "Bronzing Powder",
       price: 29.99,
-      image: "https://discountstore.pk/cdn/shop/files/41NdkYUCWuL.jpg?v=1723043005",
+      image: "https://www.heygirl.pk/cdn/shop/products/hudatantour.jpg?v=1615143868&width=533",
       description: "Natural-looking bronzer for a sun-kissed glow",
       rating: 4.8,
       reviews: 215

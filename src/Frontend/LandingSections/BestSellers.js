@@ -39,21 +39,21 @@ const BestSellers = () => {
     ];
 
     return (
-        <section className="best-sellers">
-            <div className="section-header">
+        <section className="best-seller-wrapper">
+            <div className="best-seller-header">
                 <h2>Best Sellers</h2>
                 <p>Our most loved products by customers</p>
             </div>
             
-            <div className="best-sellers-grid">
+            <div className="best-seller-grid">
                 {bestSellers.map((product) => (
                     <div key={product.id} className="best-seller-card">
-                        <div className="product-image">
+                        <div className="best-seller-image">
                             <img src={product.image} alt={product.title} />
                         </div>
-                        <div className="product-info">
+                        <div className="best-seller-info">
                             <h3>{product.title}</h3>
-                            <div className="product-rating">
+                            <div className="best-seller-rating">
                                 {[...Array(5)].map((_, i) => (
                                     <i 
                                         key={i} 
@@ -62,9 +62,9 @@ const BestSellers = () => {
                                 ))}
                                 <span>({product.reviews} reviews)</span>
                             </div>
-                            <div className="price">${(product.price / 100).toFixed(2)}</div>
-                            <Link to={`/product/${product.id}`} className="add-to-cart-btn">
-                                Add to Cart
+                            <div className="best-seller-price">${(product.price / 100).toFixed(2)}</div>
+                            <Link to={`/product/${product.id}`} className="best-seller-btn">
+                                Shop Now
                             </Link>
                         </div>
                     </div>

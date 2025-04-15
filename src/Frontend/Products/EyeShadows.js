@@ -29,7 +29,7 @@ const EyeShadows = () => {
       id: 3,
       name: "Cream Eyeshadow",
       price: "$24.99",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIVXrWa2_fHrEvXIus_SERjbaSG_GOuhuHzQ&s",
+      image: "https://www.cosmeticsdiary.pk/cdn/shop/files/yves-saint-laurent-2-empowered-silver-yves-saint-laurent-sequin-crush-mono-eyeshadows-31343170093143_533x.jpg?v=1719584827",
       description: "Long-lasting cream formula for intense color",
       rating: 4.7,
       reviews: 198
