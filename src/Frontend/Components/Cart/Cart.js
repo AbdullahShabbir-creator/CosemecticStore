@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useCart } from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
 import "./Cart.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = () => {
     const { cartItems, cartTotal, removeFromCart, updateQuantity, clearCart } = useCart();
@@ -26,6 +28,7 @@ const Cart = () => {
 
     return (
         <div className="cart-page">
+            <ToastContainer position="top-right" autoClose={2000} hideProgressBar newestOnTop closeOnClick pauseOnFocusLoss draggable pauseOnHover />
             <div className="cart-header">
                 <h1>Shopping Cart</h1>
                 <p>{cartItems.length} {cartItems.length === 1 ? 'item' : 'items'} in your cart</p>
@@ -36,7 +39,6 @@ const Cart = () => {
                     <div className="cart-items-header">
                         <span className="header-product">Product</span>
                         <span className="header-price">Price</span>
-                        <span className="header-quantity">Quantity</span>
                         <span className="header-total">Total</span>
                         <span className="header-actions">Actions</span>
                     </div>
@@ -52,22 +54,22 @@ const Cart = () => {
                                     </div>
                                 </div>
                                 <div className="item-price">${item.price.toFixed(2)}</div>
-                                <div className="item-quantity">
-                                    <div className="quantity-controls">
+                                <div className="item-total">${(item.price * item.quantity).toFixed(2)}</div>
+                                <div className="item-actions">
+                                    <div className="quantity-controls-in-actions">
                                         <button 
                                             onClick={() => updateQuantity(item.id, item.quantity - 1)}
                                             disabled={item.quantity <= 1}
                                             className="quantity-btn"
+                                            aria-label="Decrease quantity"
                                         >-</button>
                                         <span className="quantity-value">{item.quantity}</span>
                                         <button 
                                             onClick={() => updateQuantity(item.id, item.quantity + 1)}
                                             className="quantity-btn"
+                                            aria-label="Increase quantity"
                                         >+</button>
                                     </div>
-                                </div>
-                                <div className="item-total">${(item.price * item.quantity).toFixed(2)}</div>
-                                <div className="item-actions">
                                     <button 
                                         className="remove-btn" 
                                         onClick={() => removeFromCart(item.id)}

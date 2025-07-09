@@ -259,6 +259,34 @@ body {
 .status-bar.delivered { background-color: var(--success); }
 .status-bar.cancelled { background-color: var(--danger); }
 
+.order-products {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.product-quantity {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
 /* Recent Orders Section */
 .recent-orders {
   background: white;

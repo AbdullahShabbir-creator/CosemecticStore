@@ -376,6 +376,7 @@ const Dashboard = () => {
                 <th>Order ID</th>
                 <th>Date</th>
                 <th>Customer</th>
+                <th>Products</th>
                 <th>Amount</th>
                 <th>Status</th>
                 <th>Actions</th>
@@ -402,7 +403,21 @@ const Dashboard = () => {
                       </div>
                     </div>
                   </td>
-                  <td className="order-amount">${order.totalPrice.toFixed(2)}</td>
+                  <td>
+                    <div className="order-products">
+                      {order.orderItems.map(item => (
+                        <div key={item._id || item.product} className="product-item">
+                          <div className="product-details">
+                            <div className="product-name">{item.name}</div>
+                            <div className="product-quantity">Qty: {item.quantity}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </td>
+                  <td>
+                    <div className="order-amount">${order.totalPrice.toFixed(2)}</div>
+                  </td>
                   <td>
                     <div className={`order-status ${order.status.toLowerCase()}`}>
                       {order.status}

@@ -87,7 +87,15 @@ const LipSticks = () => {
             </div>
 
             <div className="product-info">
-              <h3 className="product-name">{product.name}</h3>
+              <h3 className="product-name">
+                <Link 
+                  to={`/product/lipsticks/${product.id}`}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  style={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  {product.name}
+                </Link>
+              </h3>
               <p className="product-price">{product.price}</p>
               <div className="product-rating">
                 <i className="fa-solid fa-star"></i>

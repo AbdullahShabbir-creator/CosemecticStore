@@ -33,6 +33,15 @@ const EyeShadows = () => {
       description: "Long-lasting cream formula for intense color",
       rating: 4.7,
       reviews: 198
+    },
+    {
+      id: 4,
+      name: "Shimmer Eyeshadow Palette",
+      price: "$39.99",
+      image: "https://m.media-amazon.com/images/I/81gM3HUH51L._SL1500_.jpg",
+      description: "Dazzling shimmer shades for glamorous looks",
+      rating: 4.9,
+      reviews: 245
     }
   ];
 

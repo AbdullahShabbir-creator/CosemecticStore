@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useContext, useMemo, useReducer, useCallback } from 'react';
 import { orderAPI } from '../../services/api';
 import { useAuth } from './AuthContext';
+import { toast } from 'react-toastify';
 
 const CartContext = createContext();
 
@@ -98,15 +99,21 @@ export const CartProvider = ({ children }) => {
                 quantity: updatedCart[existingItemIndex].quantity + quantity
             };
             setCartItems(updatedCart);
+            // Only show notification when item is first added
+            // (No notification when increasing quantity)
+            // toast.success('Increased quantity in cart!');
         } else {
             // Add new item
             setCartItems([...cartItems, productToAdd]);
+            toast.success('Item added to cart!');
         }
     };
 
     // Remove item from cart
     const removeFromCart = (productId) => {
-        setCartItems(cartItems.filter(item => item.id !== productId));
+        const updatedCart = cartItems.filter(item => item.id !== productId);
+        setCartItems(updatedCart);
+        toast.warn('Item removed from cart!');
     };
 
     // Update item quantity
@@ -119,6 +126,7 @@ export const CartProvider = ({ children }) => {
                 : item
         );
         setCartItems(updatedCart);
+        toast.info('Cart quantity updated!');
     };
 
     // Clear cart
@@ -196,6 +204,7 @@ export const CartProvider = ({ children }) => {
     );
 };
 
+// Custom hook to use cart context
 export const useCart = () => useContext(CartContext);
 
 export default CartContext;

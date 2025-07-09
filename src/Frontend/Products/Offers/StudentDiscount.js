@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../../Context/CartContext';
 import './Offers.css';
 
 const studentDiscounts = [
@@ -36,6 +37,10 @@ const studentDiscounts = [
 ];
 
 const StudentDiscount = () => {
+    const { addToCart } = useCart();
+    const handleAddToCart = (product) => {
+        addToCart(product, 'StudentDiscount', 1);
+    };
     return (
         <div className="offer-page">
             <div className="offer-header">
@@ -64,9 +69,9 @@ const StudentDiscount = () => {
                                 <span className="original-price">${product.originalPrice.toFixed(2)}</span>
                             </p>
                             <p className="product-description">{product.description}</p>
-                            <Link to={`/product/${product.id}`} className="add-to-cart-btn">
+                            <button className="add-to-cart-btn" onClick={() => handleAddToCart(product)}>
                                 Add to Cart
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 ))}

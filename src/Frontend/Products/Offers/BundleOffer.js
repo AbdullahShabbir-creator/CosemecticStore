@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useContext } from 'react';
+import { useCart } from '../../Context/CartContext';
 
 import './Offers.css';
 
@@ -56,37 +55,41 @@ const bundleOffers = [
 ];
 
 const BundleOffer = () => {
+    const { addToCart } = useCart();
+    const handleAddToCart = (product) => {
+        addToCart(product, 'BundleOffer', 1);
+    };
     return (
         <div className="offer-page">
             <div className="offer-header">
-                <h1>Bundle Offers</h1>
-                <p>Save big with our curated product bundles</p>
+                <h1>Bundle Deals</h1>
+                <p>Save more when you buy in sets</p>
             </div>
 
             <div className="offer-grid">
-                {bundleOffers.map((bundle) => (
-                    <div key={bundle.id} className="offer-card">
+                {bundleOffers.map((product) => (
+                    <div key={product.id} className="offer-card">
                         <div className="offer-image">
-                            <img src={bundle.image} alt={bundle.name} />
+                            <img src={product.image} alt={product.name} />
                             <div className="discount-badge">
-                                {bundle.discount}% OFF
+                                {product.discount}% OFF
                             </div>
                         </div>
                         <div className="offer-content">
-                            <h3>{bundle.name}</h3>
+                            <h3>{product.name}</h3>
                             <p className="product-price">
-                                <span className="discounted-price">${bundle.price.toFixed(2)}</span>
-                                <span className="original-price">${bundle.originalPrice.toFixed(2)}</span>
+                                <span className="discounted-price">${product.price.toFixed(2)}</span>
+                                <span className="original-price">${product.originalPrice.toFixed(2)}</span>
                             </p>
-                            <p className="product-description">{bundle.description}</p>
-                            <ul className="bundle-items">
-                                {bundle.items.map((item, index) => (
-                                    <li key={index}>{item}</li>
+                            <p className="product-description">{product.description}</p>
+                            <ul>
+                                {product.items.map((item, idx) => (
+                                    <li key={idx}>{item}</li>
                                 ))}
                             </ul>
-                            <Link to={`/product/${bundle.id}`} className="add-to-cart-btn">
+                            <button className="add-to-cart-btn" onClick={() => handleAddToCart(product)}>
                                 Add to Cart
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 ))}

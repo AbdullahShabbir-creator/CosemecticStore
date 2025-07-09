@@ -10,16 +10,56 @@ export default function Navbar() {
     const { user, isAuthenticated, logout } = useAuth();
     const navigate = useNavigate();
     const [showUserMenu, setShowUserMenu] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
     const userMenuRef = useRef(null);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const products = [
+      { id: 1, name: "Lipstick" },
+      { id: 2, name: "Foundation" },
+      { id: 3, name: "Eyeliner" },
+      { id: 4, name: "Face Powder" },
+    ]; // your static frontend product list
+    const handleSearch = () => {
+        const results = products.filter((product) =>
+          product.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredProducts(results);
+      };
+          
+    // ✅ Detect scroll direction (up/down) to apply sticky class
+    useEffect(() => {
+        let lastScrollTop = window.scrollY;
 
-    // Handle clicks outside the user menu to close it
+        const handleScroll = () => {
+            const currentScrollTop = window.scrollY;
+
+            if (currentScrollTop < lastScrollTop) {
+                // Scrolling up
+                setIsSticky(true);
+            } else {
+                // Scrolling down
+                setIsSticky(false);
+            }
+
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    // ✅ Close user menu on outside click
     useEffect(() => {
         function handleClickOutside(event) {
             if (userMenuRef.current && !userMenuRef.current.contains(event.target)) {
                 setShowUserMenu(false);
             }
         }
-        
+
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
@@ -28,10 +68,8 @@ export default function Navbar() {
 
     const handleUserIconClick = () => {
         if (isAuthenticated) {
-            // Toggle the user menu
             setShowUserMenu(!showUserMenu);
         } else {
-            // Not logged in, go to login page
             navigate('/login');
         }
     };
@@ -65,29 +103,39 @@ export default function Navbar() {
                     till 27th March 2025 will be delivered before Eid.
                 </p>
             </div>
-
-            <nav className="navbar navbar-expand-lg navbar-dark bg-black " style={{height:"138px"}}>
+ 
+            {/* ✅ Sticky class applied only when scrolling up */}
+            <nav className={`navbar navbar-expand-lg navbar-dark bg-black ${isSticky ? 'sticky' : ''}`} style={{ height: "138px" }}>
                 <div className="w-100 d-flex justify-content-around align-items-center px-3">
-                    <div className="search-box">
-                        <i className="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" className="search-input" placeholder="Search..." />
-                    </div>
-
-                    <Link className="navbar-brand mx-auto logo" to="/">
+                <div className="search-box">
+                <Link className="navbar-brand mx-auto logo" to="/">
                         Glow and Glamour
                     </Link>
+  {/* <input
+    type="text"
+    className="search-input"
+    placeholder="Search..."
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+    onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+  />
+  <i
+    className="fa-solid fa-magnifying-glass"
+    style={{ cursor: 'pointer' }}
+    onClick={handleSearch}
+  ></i> */}
+</div>
+
+
+                   
 
                     <div className="navbar-icons">
-                        <Link to="#">
-                            <i className="fa-solid fa-location-dot"></i>
-                        </Link>
                         <div className="user-icon-container" ref={userMenuRef}>
                             <div className="user-icon" onClick={handleUserIconClick}>
                                 <i className="fa-solid fa-circle-user"></i>
                                 {isAuthenticated && <span className="user-status-dot"></span>}
                             </div>
-                            
-                            {/* User dropdown menu */}
+
                             {showUserMenu && isAuthenticated && (
                                 <div className="user-dropdown-menu p-0">
                                     <div className="user-info">
@@ -95,34 +143,36 @@ export default function Navbar() {
                                         <span className="user-email">{user?.email}</span>
                                     </div>
                                     <div className="dropdown-divider"></div>
-                                    
+
                                     {user?.role === 'admin' && (
                                         <div className="dropdown-item p-0" onClick={handleAdminDashboard}>
                                             <i className="fa-solid fa-gauge-high"></i> Dashboard
                                         </div>
                                     )}
-                                    
+
                                     <div className="dropdown-item p-0" onClick={handleProfile}>
                                         <i className="fa-solid fa-user"></i> Profile
                                     </div>
-                                    
+
                                     <div className="dropdown-item" onClick={handleOrders}>
                                         <i className="fa-solid fa-box"></i> My Orders
                                     </div>
-                                    
+
                                     <div className="dropdown-divider"></div>
-                                    
+
                                     <div className="dropdown-item logout" onClick={handleLogout}>
                                         <i className="fa-solid fa-sign-out-alt"></i> Logout
                                     </div>
                                 </div>
                             )}
                         </div>
+
                         {isAuthenticated && user && user.role === 'admin' && (
                             <Link to="/admin/dashboard" className="admin-link">
                                 <i className="fa-solid fa-lock"></i>
                             </Link>
                         )}
+
                         <Link to="/cart">
                             <div className="cart-icon">
                                 <i className="fa-solid fa-cart-plus"></i>
@@ -135,7 +185,7 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            <div className="category-navbar">
+            <div className={`category-navbar ${isSticky ? 'sticky' : ''}`}>
                 <ul className="category-list">
                     <li className="category-item">
                         <Link to="#">Make Up</Link>

@@ -13,6 +13,7 @@ export default function Login() {
   // Redirect if already logged in
   useEffect(() => {
     if (isAuthenticated) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       navigate('/');
     }
   }, [isAuthenticated, navigate]);

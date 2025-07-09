@@ -51,6 +51,7 @@ const SpecialOffers = () => {
                                      offer.title === "Bundle Deals" ? "/offers/bundle-offers" : 
                                      "/offers/student-discounts"}
                                 className="shop-now-btn"
+                                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                             >
                                 Shop Now
                             </Link>

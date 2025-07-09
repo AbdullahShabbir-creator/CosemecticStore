@@ -254,12 +254,23 @@ const OrdersManagement = () => {
                   {selectedOrder.orderItems.map((item, index) => (
                     <tr key={index}>
                       <td className="product-cell">
-                        <img src={item.image} alt={item.name} />
-                        <span>{item.name}</span>
+                        <img src={item.product?.image || item.image} alt={item.product?.name || item.name} style={{ width: '40px', height: '40px', objectFit: 'cover', marginRight: '8px' }} />
+                        <div style={{ display: 'inline-block', verticalAlign: 'top' }}>
+                          <span style={{ fontWeight: 'bold' }}>{item.product?.name || item.name}</span>
+                          {item.product?.brand && (
+                            <div style={{ fontSize: '0.85em', color: '#888' }}>Brand: {item.product.brand}</div>
+                          )}
+                          {item.product?.category && (
+                            <div style={{ fontSize: '0.85em', color: '#888' }}>Category: {item.product.category}</div>
+                          )}
+                          {item.product?.sku && (
+                            <div style={{ fontSize: '0.85em', color: '#888' }}>SKU: {item.product.sku}</div>
+                          )}
+                        </div>
                       </td>
-                      <td>Rs. {item.price.toLocaleString()}</td>
+                      <td>Rs. {(item.product?.price ?? item.price).toLocaleString()}</td>
                       <td>{item.quantity}</td>
-                      <td>Rs. {(item.price * item.quantity).toLocaleString()}</td>
+                      <td>Rs. {((item.product?.price ?? item.price) * item.quantity).toLocaleString()}</td>
                     </tr>
                   ))}
                 </tbody>

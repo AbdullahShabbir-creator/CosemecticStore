@@ -12,9 +12,11 @@ import Checkout from './Frontend/Components/Checkout/Checkout';
 import Dashboard from './Frontend/Admin/Dashboard';
 import Profile from './Frontend/User/Profile';
 import SetupAdmin from './Frontend/Admin/SetupAdmin';
+import AllOrders from './Frontend/Admin/AllOrders';
 import OrderHistory from './Frontend/User/OrderHistory';
 import PrivateRoute from './Frontend/Components/PrivateRoute';
 import Footer from './Frontend/Footer/Footer';
+import ScrollToTopButton from './Frontend/Components/ScrollToTopButton';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -103,6 +105,7 @@ function App() {
             {/* Admin Routes */}
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/setup" element={<SetupAdmin />} />
+            <Route path="/admin/orders" element={<PrivateRoute><AllOrders /></PrivateRoute>} />
             
             {/* Cart and Checkout Routes */}
             <Route path="/cart" element={<Cart />} />
@@ -170,6 +173,7 @@ function App() {
             <Route path="/shipping" element={<ShippingPolicy />} />
           </Routes>
           <Footer />
+          <ScrollToTopButton />
           <ToastContainer
             position="top-right"
             autoClose={3000}

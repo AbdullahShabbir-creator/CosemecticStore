@@ -50,7 +50,11 @@ const FeaturedCategories = () => {
                         <div className="category-content">
                             <h3>{category.title}</h3>
                             <p>{category.description}</p>
-                            <Link to={category.route} className="explore-btn">
+                            <Link 
+                                to={category.route} 
+                                className="explore-btn"
+                                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                            >
                                 Explore Now
                             </Link>
                         </div>
